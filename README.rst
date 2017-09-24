@@ -7,7 +7,7 @@ It recreates a server connection list in psql-friendly manner.
 Status
 ------
 
-Developer version (git master branch).
+Release ``pgadmin3-to-psql-0.1.1``.
 
 Using Example
 -------------
