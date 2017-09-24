@@ -1,0 +1,27 @@
+#!/usr/bin/python
+# -*- mode: python; coding: utf-8 -*-
+
+import argparse
+
+def pgadmin3_to_psql(source_path, dest_path):
+    # TODO ...
+    pass
+
+def main():
+    parser = argparse.ArgumentParser()
+    
+    parser.add_argument(
+        'source_path',
+        help='path to source pgAdmin3 config file',
+    )
+    parser.add_argument(
+        'dest_path',
+        help='path to making psql directory',
+    )
+    
+    args = parser.parse_args()
+    
+    pgadmin3_to_psql(args.source_path, args.dest_path)
+
+if __name__ == '__main__':
+    main()
