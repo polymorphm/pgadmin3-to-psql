@@ -14,7 +14,7 @@ Using Example
 
     $ ./pgadmin3-to-psql ~/.pgadmin3 ~/.pgserv
     
-    $ . ~/.pgserv/my-favorite-server123
+    $ . ~/.pgserv/my-group/my-favorite-server.env
     
     $ psql
 
