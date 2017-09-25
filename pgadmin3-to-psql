@@ -79,6 +79,23 @@ def make_psql_env_file(serv_item, dest_path):
             '{}.env'.format(name.replace(os.sep, '.')),
         )
         
+        if os.path.exists(env_path):
+            suffix = 1
+            
+            while True:
+                suffix += 1
+                
+                env_path = os.path.join(
+                    dir_name_path,
+                    '{}.{}.env'.format(
+                        name.replace(os.sep, '.'),
+                        suffix,
+                    ),
+                )
+                
+                if not os.path.exists(env_path):
+                    break
+        
         env_fd = stack.enter_context(open(
             env_path,
             mode='w',
