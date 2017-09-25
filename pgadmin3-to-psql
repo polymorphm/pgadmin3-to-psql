@@ -42,7 +42,8 @@ def pgadmin3_serv_iter(src_fd):
             
             value = line[len(prefix):]
             
-            if not value:
+            if not value or \
+                    prefix == 'Group=' and value == 'Servers':
                 return
             
             serv_item[field] = value
